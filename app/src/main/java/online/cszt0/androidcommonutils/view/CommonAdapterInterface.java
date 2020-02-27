@@ -47,7 +47,7 @@ public interface CommonAdapterInterface<Data> extends Filterable {
      * 对于实现该接口的数据实体类，应当在 {@link #viewType()} 中返回所使用的 viewType。
      * 对于未实现该接口的数据实体类，认为使用的 viewType 为 0
      */
-    public interface ViewTypeRequire {
+    interface ViewTypeRequire {
         int viewType();
     }
 
@@ -57,7 +57,7 @@ public interface CommonAdapterInterface<Data> extends Filterable {
      * 对于实现该接口的数据实体类，应当在 {@link #filter(CharSequence)} 中根据给定条件判断是否通过选择。
      * 对于未实现该接口的数据实体类，认为总是通过选择。
      */
-    public interface Filterable {
+    interface Filterable {
         /**
          * 判断在给定条件下是否通过选择。
          *
