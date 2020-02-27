@@ -12,17 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import online.cszt0.androidcommonutils.view.ViewHolder;
 
 /**
- * 对 {@link ViewHolder} 的实现
+ * 对 {@link ViewHolder} 的实现，同时继承 {@link RecyclerView.ViewHolder}
  * <p>
  * 您应当仅通过接口实现对该类的访问。
  *
  * @hide
  */
-public class ViewHolderImpl implements ViewHolder {
+public class RecyclerViewViewHolderImpl extends RecyclerView.ViewHolder implements ViewHolder {
     private final View contentView;
     private final SparseArray<View> cacheViews;
 
-    public ViewHolderImpl(@NonNull View contentView) {
+    public RecyclerViewViewHolderImpl(@NonNull View contentView) {
+        super(contentView);
         this.contentView = contentView;
         cacheViews = new SparseArray<>();
     }

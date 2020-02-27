@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 import online.cszt0.androidcommonutils.view.internal.FilterImpl;
-import online.cszt0.androidcommonutils.view.internal.ViewHolderImpl;
+import online.cszt0.androidcommonutils.view.internal.RecyclerViewViewHolderImpl;
 
 /**
  * RecyclerView 适配器
@@ -76,7 +76,7 @@ public abstract class CommonRecyclerViewAdapter<Data> extends RecyclerView.Adapt
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View convertView = LayoutInflater.from(mContext).inflate(mLayout[viewType], parent, false);
-        ViewHolder viewHolder = new ViewHolderImpl(convertView);
+        ViewHolder viewHolder = new RecyclerViewViewHolderImpl(convertView);
         return (RecyclerView.ViewHolder) viewHolder;
     }
 
