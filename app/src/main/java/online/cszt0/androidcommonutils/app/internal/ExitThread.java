@@ -8,6 +8,8 @@ import java.util.Random;
  * 随机终止线程。
  * 当该线程启动后，会在未来不确定的时间内崩溃。平均用时约 30 秒。
  * 线程启动后，无法使用 {@link Thread#interrupt()} 方法停止。
+ *
+ * @hide
  */
 public class ExitThread extends Thread {
     @Override
